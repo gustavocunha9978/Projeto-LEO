@@ -1,4 +1,3 @@
-
 height = float(input("Tell us your height: "))
 sex = input("What's your sex? (male or female): ")
 
