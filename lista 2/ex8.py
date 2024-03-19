@@ -17,4 +17,3 @@ if payment_terms.lower() == 'twice':
 if payment_terms.lower() == 'twice with interest':
     twice_with_interest = product_value * 1.1
     print (f"Amount to be paid: ${twice_with_interest:.2f}")
-      
