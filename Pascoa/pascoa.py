@@ -1,24 +1,23 @@
 year = int(input("Digite o ano: "))
 
-aurea = year % 19 + 1
-sec = year // 100 + 1
-correcao_x = (3 * sec // 4) - 12
-correcao_z = (8 * sec + 5) // 25 - 5
-epacta = (11 * aurea + 20 + correcao_z - correcao_x) % 30
+golden = year % 19 + 1
+century = year // 100 + 1
+correction_x = (3 * century // 4) - 12
+correction_z = (8 * century + 5) // 25 - 5
+epact = (11 * golden + 20 + correction_z - correction_x) % 30
 
-if (epacta == 25 and aurea > 11) or (epacta == 24):
-    epacta += 1
+if (epact == 25 and golden > 11) or (epact == 24):
+    epact += 1
 
-lua = 44 - epacta 
-if lua < 21:
-    lua += 30
+moon = 44 - epact
+if moon < 21:
+    moon += 30
 
-domingo = (5 * year) // 4  - (correcao_x + 10)
-lua = (lua + 7) - ((domingo + lua) % 7)
+sunday = (5 * year) // 4  - (correction_x + 10)
+moon = (moon + 7) - ((sunday + moon) % 7)
 
-if lua > 31:
-    lua -= 31
-    print(lua, "de abril")
+if moon > 31:
+    moon -= 31
+    print(moon, "of April")
 else:
-    print(lua, "de março")
-    
+    print(moon, "of March")
