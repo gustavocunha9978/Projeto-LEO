@@ -1,12 +1,13 @@
-def count_words(file_path):
-    palindromo = palindromo.replace(" ", ""). lower()
+def count_vowels(file_path):
+    vowels = 'aeiouAEIOU'
     with open(file_path, 'r', encoding='utf-8') as file:
         content = file.read()
-        palindromo_count = 0
-        if palindromo == palindromo [::-1]:
-              palindromo_count += 1
-        return palindromo_count
-    
+        vowel_count = 0
+        for char in content:
+            if char in vowels:
+                vowel_count += 1
+        return vowel_count
+
 archive = 'book/download_file.txt'
-total_words = count_words(archive)
-print(total_words)
+total_vowels = count_vowels(archive)
+print("Total de vogais:", total_vowels)
